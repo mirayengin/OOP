@@ -8,7 +8,7 @@
 //? Eger nesnelerden bagimsiz sadece ilgili class' a ait bir degiskene
 //? ihtiyac varsa o zaman static degisken kullanmak mantiklidir.
 
-//! Encapsulation OOP'nin temel unsurlarindan birisidir.
+//! Encapsulation OOP'nin temel unsurlarindan birisidir. Kısaca kontrol altına alamak class içine erişimi 
 //! Bir class icerisindeki degeri/durumu class disindan dogrudan ve
 //! izinsiz erisimlere kapatmak icin kullanilir.
 
@@ -28,7 +28,7 @@ class Book {
     #id;
   
     //! static property tanimlamasi
-    static counter = 0;
+    static counter = 0; //! Tek elden kontrol için constructer dışına yazıp öyle kullanıyoruz
   
     constructor(title, author, year) {
       this.author = author;
@@ -42,7 +42,7 @@ class Book {
       };
   
       //* static degiskenin degerini degistirdik
-      Book.counter++; //! ClasName.propertyName
+      Book.counter++; //! ClasName.propertyName //! Bu constructor da olmasına rağmen static yaparak class ait bir değişken yaptık sadece
     }
   
     //? Class icerisinde public metotlar yardimiyla private degiskenler okunabilir.
